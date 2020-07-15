@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="css/general.css">
+	
+	<title>Login</title>
+</head>
+<body background="images/dino--.jpg" style=" background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;" >
+  <a href="/sign_up"><button style="margin-top:50px;margin-left:600px;font-size: 20px;color:black">Sign Up</button></a>
+      <p style="margin-left:140px; color:#ff4d4d;font-size:150%; margin-top:30px;font-size:150%">Login </p>
+        
+	<form action="#" th:action="@{/login_validation}" th:object="${user}"
+			method="POST">
+			<table border="0" width="30%" cellpadding="20">
+            <tbody>
+            <tr>
+			<td><label style="color:white;font-size:150%;margin-left:100px;text-indent:40px">Username</label></td>
+			<td><input style="font-size:150%;" type="text" th:field="*{user_name}" placeholder="Username"><br/><br/></td>
+			</tr>
+			<tr>
+			<td><label style="color:white;font-size:150%;text-indent:40px;margin-left:100px">Password</label></td>
+			<td><input style="font-size:150%;" type="password" th:field="*{password}" placeholder="Password"><br/></td>
+			</tr>
+			<tr>
+			<td></td>	
+			<td><button style="font-size: 20px;color:black;margin-left:150px;margin-top:20px;" type="submit">Login</button></td>
+			</tr>
+			</tbody>
+			</table>
+	</form>   
+</body>
+
+</html>

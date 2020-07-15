@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content-"width=device-width, initial-scale=1" charset="ISO-8859-1">
+<title>Profile Dashboard</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/tabs.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h2 style="margin-left:20px">Dashboard</h2>
+<div class="layout">
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Active')" id="defaultOpen">Active Courses</button>
+  <button class="tablinks" onclick="openCity(event, 'Completed')">Completed Courses</button>
+  <button class="tablinks" onclick="openCity(event, 'Explore')">Explore Course</button>
+</div>
+
+<div id="Active" class="tabcontent">
+  <h3>Resume Learning...</h3>
+  <p>Current courses.</p>
+</div>
+
+<div id="Completed" class="tabcontent">
+  <h3>Need to refresh?</h3>
+  <p>Completed courses.</p> 
+</div>
+
+<div id="Explore" class="tabcontent">
+  <h3>Explore new stacks!!!</h3>
+  <p>New courses curated based on your interests are available.</p>
+  <div class="text-center">
+	<a href="/all_courses" class="btn btn-success btn-lg" role="button">Let's Explore</a>
+</div>
+</div>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

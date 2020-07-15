@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+
+body 
+{
+  background-color :#313131;
+}
+
+p{
+	color:white;font-size:25px;
+}
+
+h2{
+	color:white;font-size:40px;
+}
+
+h3{
+	color:white;font-size:35px;
+}
+img {
+  border-radius:30px; 
+  width:292px;
+  height: 219px;
+  padding : 15px 15px 15px 15px;
+
+}
+body 
+{
+  background-color :#121212;
+}
+.brightness {
+    
+    display: inline-block;
+
+}
+.brightness img:hover {
+    opacity: .7;
+}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" href="css/general.css">
+	<style>background="images/dino--.jpg";</style>
+    <title>Registration</title>
+</head>
+    
+<body background="images/dino--.jpg" style=" background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;" >
+  <p style="margin-left:125px; color:#ff4d4d;font-size:150%; margin-top:110px;font-size:150%">Sign Up </p>
+	<form action="#" th:action="@{/become_user}" th:object="${user}"
+			method="POST">
+			<table border="0" width="30%" cellpadding="20">
+            <tbody>
+            <tr>
+			<td><label style="color:white;font-size:150%;text-indent:40px;margin-left:100px">Username</label></td>
+			<td><input style="font-size:150%;" type="text" th:field="*{user_name}" placeholder="Username"><br/><br/></td>
+			</tr>
+			<tr>
+			<td><label style="color:white;font-size:150%;text-indent:40px;margin-left:100px">Password</label></td>
+			<td><input style="font-size:150%;" type="password" th:field="*{password}" placeholder="Password"><br/></td>
+			</tr>
+			<tr>
+			<td></td>	
+			<td><input  style="font-size: 20px;color:black;margin-left:70px" type="reset" value="Reset" />
+				<input  style="font-size: 20px;color:black;margin-left:30px" type="submit" value="create" /></td>
+			</tr>
+			</tbody>
+			</table>
+	</form>   
+    </body>
+</html>
